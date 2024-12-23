@@ -1,0 +1,160 @@
+.Home-main {
+  margin-top: 20px;
+}
+
+.header-2 {
+  font-weight: 550;
+  font-size: 24px;
+}
+.layout-container {
+  margin-top: 20px;
+  user-select: none;
+}
+
+.layout-list-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  margin-left: 50%;
+}
+.layout-border {
+  border-bottom: 1px solid #d0cdcd;
+}
+
+.layout-list-header span {
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #666669;
+}
+.layout-list {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+.layout-list-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #666669;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.layout-list-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  width: 50%;
+}
+.layout-list:hover {
+  cursor: pointer;
+  background-color: #eef5ff;
+}
+.layout-list-item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666669;
+  gap: 10px;
+}
+
+.Layout-list-button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 20px;
+  padding-bottom: 60px;
+  gap: 20px;
+  user-select: none;
+}
+
+.Layout-list-button div {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 8px;
+}
+.layout-list-item div img {
+  width: 40px;
+  height: 40px;
+}
+.Layout-list-button-1 {
+  color: #2b0b4f;
+  background-color: #f8f1ff;
+  border-color: #dbbffa;
+  border: 1px solid #e4cdff;
+}
+.Layout-list-button-2 {
+  color: #450502;
+  background-color: #fff2ee;
+  border-color: #ffc7bd;
+  border: 1px solid #ffdbcb;
+}
+.Layout-list-button-3 {
+  color: #022c25;
+  background-color: #dcfaf5;
+  border-color: #85e6d6;
+  border: 1px solid #b5f0e0;
+}
+.Layout-list-button-4 {
+  color: #052b0e;
+  background-color: #e8f7eb;
+  border-color: #aae4b9;
+  border: 1px solid #c8f0d5;
+}
+.Layout-list-button-1:hover {
+  color: #2b0b4f;
+  background-color: #ecdefa;
+  border-color: #9748f1;
+  border: 1px solid #7a0cf8;
+  cursor: pointer;
+}
+.Layout-list-button-2:hover {
+  color: #450502;
+  background-color: #facec0;
+  border-color: #fa9b8a;
+  border: 1px solid #ff5031;
+  cursor: pointer;
+}
+.Layout-list-button-3:hover {
+  color: #022c25;
+  background-color: #a8f8eb;
+  border-color: #119c85;
+  cursor: pointer;
+}
+.Layout-list-button-4:hover {
+  color: #052b0e;
+  background-color: #cefdd8;
+  border-color: #168a35;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 990px) {
+  .layout-list-header {
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 30%;
+  }
+  .layout-list-header--active {
+    display: none;
+  }
+  .layout-list-item--active {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  .layout-list-title {
+    width: 30%;
+  }
+  .layout-list-item {
+    width: 70%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Layout-list-button {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

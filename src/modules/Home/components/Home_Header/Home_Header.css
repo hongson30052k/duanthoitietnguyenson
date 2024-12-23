@@ -1,0 +1,116 @@
+.served-by {
+  display: flex;
+  justify-content: right;
+}
+.served-by span {
+  font-size: 18px;
+  font-weight: 440px;
+  margin-top: 12px;
+}
+.Home-Header .menu-icon {
+  display: none;
+  cursor: pointer;
+}
+.Home-Header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.Home-Header .logo {
+  width: 4%;
+  margin-right: 2%;
+}
+.Home-Header .logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.Home-Header .search-bar {
+  gap: 100px;
+  margin-top: 32px;
+  width: 80%;
+}
+.page-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.Home-Header .search-bar input {
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #e4e5e7;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  width: 100%;
+  padding-left: 70px;
+}
+.Home-Header .search-bar input:focus {
+  border: 1px solid #2580ff;
+}
+.search-bar i {
+  color: rgb(102, 102, 105);
+  width: 30px;
+  height: 30px;
+  top: -36px;
+  left: 30px;
+  position: relative;
+}
+.page-header__toolbar {
+  background-color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgb(178, 207, 245);
+  padding: 8px 16px;
+  border-radius: 8px;
+  user-select: none;
+  text-align: center;
+}
+.page-header__toolbar:hover {
+  cursor: pointer;
+  background-color: #eef5ff;
+}
+.page-header__search-button {
+  color: rgb(23, 103, 206);
+  display: flex;
+  align-items: center;
+}
+.button__content-text {
+  color: rgb(23, 103, 206);
+  cursor: pointer;
+}
+.Home-content {
+  margin: 0 1%;
+}
+@media screen and (max-width: 674px) {
+  .served-by {
+    display: none;
+  }
+  .search {
+    margin-right: -60px;
+  }
+  .page-header__toolbar {
+    display: none;
+  }
+  .button__content-text {
+    display: none;
+  }
+  .Home-Header .logo {
+    display: none;
+  }
+  .Home-Header .menu-icon {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1325px) {
+  .Home-content {
+    margin: 0 calc(4% + 4vw);
+  }
+  .Home-Header .menu-icon {
+    display: none;
+  }
+}
