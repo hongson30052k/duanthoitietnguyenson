@@ -4,7 +4,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 const Home_Button = () => {
   return (
     <div className="Home-content">
-      <h2 className="header-2">Các dịch vụ khác của Viện Khí tượng</h2>
+      <h2 className="header-about">Các dịch vụ khác của Viện Khí tượng</h2>
       <div className="Home-Button">
         <div className="Home-Button-list">
           <a href="">Bản đồ dự báo của nhà khí tượng học</a>
