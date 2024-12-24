@@ -27,7 +27,11 @@
 @media screen and (max-width: 674px) {
   .journal-List {
     grid-template-columns: repeat(1, 1fr);
-    gap: 0px;
+    gap: 40px;
+  }
+  .journal-List div {
+    width: 100%;
+    height: 100%;
   }
   .journal-List div img {
     width: 100%;

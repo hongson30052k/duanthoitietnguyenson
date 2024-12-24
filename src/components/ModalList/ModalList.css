@@ -1,0 +1,43 @@
+.modal-list {
+  background-color: #ffffff;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  z-index: 100;
+  justify-content: left;
+  align-items: center;
+  padding-left: 80px;
+  border-radius: 0 0 10px 10px;
+}
+.modal-list .modal-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: -80px;
+  padding: 20px 40px;
+}
+.modal-list-item-border {
+  bottom: 64px;
+  width: 100%;
+  height: 1px;
+  width: 95%;
+  margin-left: -30px;
+  background-color: #d0cdcd;
+}
+
+.modal-list .modal-list-item:hover {
+  cursor: pointer;
+  background-color: #e8f7ff;
+}
+
+.modal-list .modal-list-item span {
+  font-size: 20px;
+  font-weight: 500;
+}
+@media screen and (max-width: 674px) {
+  .modal-list .modal-list-item {
+    width: 100%;
+    background-color: #ffffff;
+  }
+}

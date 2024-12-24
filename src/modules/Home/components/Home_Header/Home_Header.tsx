@@ -3,8 +3,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Home_Main from "../Home_Main/Home_Main";
 import ManageSearchIcon from "@mui/icons-material/ManageSearch";
 import ModalStore from "../../../../store/openModalMenuStore";
+import ModalList from "../../../../components/ModalList/ModalList";
+import weatherModalStore from "../../../../store/weatherModalStore";
 const Home_Header = () => {
   const { toggleDrawer } = ModalStore();
+  const { setValueSearch } = weatherModalStore();
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValueSearch(event.target.value);
+  };
   return (
     <div className="Home-content">
       <div className="served-by">
@@ -20,10 +26,15 @@ const Home_Header = () => {
         </div>
         <div className="page-header">
           <div className="search-bar">
-            <input type="text" />
+            <input
+              type="text"
+              onChange={handleInputChange}
+              placeholder="Tìm kiếm"
+            />
             <i>
               <ManageSearchIcon style={{ width: "30px", height: "30px" }} />
             </i>
+            <ModalList />
           </div>
           <div
             className="page-header__toolbar"
