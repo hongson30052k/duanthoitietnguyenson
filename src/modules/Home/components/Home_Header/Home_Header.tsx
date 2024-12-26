@@ -1,6 +1,5 @@
 import "./Home_Header.css";
 import MenuIcon from "@mui/icons-material/Menu";
-import Home_Main from "../Home_Main/Home_Main";
 import ManageSearchIcon from "@mui/icons-material/ManageSearch";
 import ModalStore from "../../../../store/openModalMenuStore";
 import ModalList from "../../../../components/ModalList/ModalList";
@@ -48,7 +47,6 @@ const Home_Header = () => {
           <MenuIcon className="menu-icon" onClick={() => toggleDrawer(true)} />
         </div>
       </div>
-      <Home_Main />
     </div>
   );
 };

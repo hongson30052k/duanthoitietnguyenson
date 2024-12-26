@@ -3,7 +3,11 @@ import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import weatherModalStore from "../../store/weatherModalStore";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import weatherStoreId from "../../store/weatherStoreId";
 const ModalList = () => {
+  const navagite = useNavigate();
+  const { fetchWeatherId } = weatherStoreId();
   const {
     fetchWeatherModal,
     weatherList,
@@ -14,8 +18,12 @@ const ModalList = () => {
   useEffect(() => {
     fetchWeatherModal(valueSearch);
   }, [fetchWeatherModal, valueSearch, setValueSearch]);
-  console.log(weatherList);
-  console.log(valueSearch);
+  const handleClick = async (id: number) => {
+    localStorage.setItem("id", id.toString());
+    await fetchWeatherId(id);
+    await navagite(`/forecast/${id}`);
+    setValueSearch("");
+  };
   return (
     <div className="modal-list">
       {isLoading && valueSearch.trim() != "" ? (
@@ -25,9 +33,13 @@ const ModalList = () => {
       ) : (
         weatherList?.length > 0 &&
         valueSearch.trim() != "" &&
-        weatherList?.map((item, index) => (
+        weatherList?.map((item) => (
           <>
-            <div className="modal-list-item" key={index}>
+            <div
+              className="modal-list-item"
+              key={item.id}
+              onClick={() => handleClick(item.id)}
+            >
               <AddLocationAltIcon />
               <span>{item.city}</span>
             </div>

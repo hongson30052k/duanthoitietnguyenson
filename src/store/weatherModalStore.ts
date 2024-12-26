@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import axiosInstance from "../api/axiosClient";
 interface IWeather {
+  id: number;
   city: string;
 }
 

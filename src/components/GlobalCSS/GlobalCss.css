@@ -2,3 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
+.Home-content {
+  margin: 0 1%;
+}
+
+@media screen and (min-width: 1325px) {
+  .Home-content {
+    margin: 0 calc(4% + 4vw);
+  }
+}

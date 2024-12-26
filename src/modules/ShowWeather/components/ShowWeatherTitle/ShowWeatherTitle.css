@@ -1,0 +1,23 @@
+.ShowWeatherTitle {
+}
+
+.ShowWeatherTitle .ShowWeatherTitle-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ShowWeatherTitle-content .ShowWeatherTitle-content-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ShowWeatherTitle-content .ShowWeatherTitle-content-title span {
+  font-size: 26px;
+  font-weight: 550;
+}
+
+.ShowWeatherTitle-content .ShowWeatherTitle-content-address {
+  font-size: 16px;
+  font-weight: 400;
+  color: #00050e;
+}

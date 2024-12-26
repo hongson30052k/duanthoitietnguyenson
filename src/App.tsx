@@ -1,12 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
+import ShowWeatherPage from "./pages/ShowWeather/ShowWeatherPage";
+import ModalMenu from "./components/ModalMenu/ModalMenu";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" Component={HomePage} />
+        <Route path="/forecast/:city" Component={ShowWeatherPage} />
       </Routes>
+      <ModalMenu />
     </>
   );
 }

@@ -4,6 +4,7 @@ import bgr from "./background-cloud.jpg";
 import Home_Journal from "./components/Home_Journal/Home_Journal";
 import Home_Button from "./components/Home_Button/Home_Button";
 import Footer from "../../components/Footer/Footer";
+import Home_Main from "./components/Home_Main/Home_Main";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       }}
     >
       <Home_Header />
+      <Home_Main />
       <Home_Journal />
       <Home_Button />
       <Footer />

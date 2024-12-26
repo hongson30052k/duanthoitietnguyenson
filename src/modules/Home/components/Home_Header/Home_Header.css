@@ -84,9 +84,6 @@
   color: rgb(23, 103, 206);
   cursor: pointer;
 }
-.Home-content {
-  margin: 0 1%;
-}
 
 @media screen and (max-width: 674px) {
   .page-header {

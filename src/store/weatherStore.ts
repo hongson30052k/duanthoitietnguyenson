@@ -8,6 +8,7 @@ interface IWeather {
   temperature: number;
 }
 interface ITheme {
+  id: number;
   city: string;
   week_weather: IWeather[];
 }

@@ -1,0 +1,11 @@
+.table-link {
+  font-size: 12px;
+  line-height: 35px;
+}
+
+@media screen and (max-width: 985px) {
+  .table-link {
+    display: none;
+    font-size: 12px;
+  }
+}

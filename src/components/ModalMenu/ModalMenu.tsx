@@ -8,7 +8,7 @@ import ModalStore from "../../store/openModalMenuStore";
 import CloseIcon from "@mui/icons-material/Close";
 import { Typography } from "@mui/material";
 
-export default function TemporaryDrawer() {
+export default function ModalMenu() {
   const { open, toggleDrawer } = ModalStore();
   const DrawerList = (
     <>
@@ -43,7 +43,7 @@ export default function TemporaryDrawer() {
             "Độ sâu tuyết",
             "Đèo núi",
             "Liên hệ",
-          ].map((text, index) => (
+          ].map((text) => (
             <>
               <Divider />
               <ListItem key={text} disablePadding>
@@ -55,7 +55,6 @@ export default function TemporaryDrawer() {
                       padding: "8px",
                       fontSize: "16px",
                     }}
-                    key={index}
                   >
                     {text}
                   </Typography>
