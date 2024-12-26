@@ -80,7 +80,7 @@ function a11yProps(index: number) {
 export default function ShowWeatherList() {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (newValue: number) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
@@ -91,7 +91,7 @@ export default function ShowWeatherList() {
           <div className="Home-content">
             <Tabs
               value={value}
-              onChange={() => handleChange}
+              onChange={handleChange}
               aria-label="basic tabs example"
               textColor="inherit"
             >
