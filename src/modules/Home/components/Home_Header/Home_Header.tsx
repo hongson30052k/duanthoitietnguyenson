@@ -4,9 +4,11 @@ import ManageSearchIcon from "@mui/icons-material/ManageSearch";
 import ModalStore from "../../../../store/openModalMenuStore";
 import ModalList from "../../../../components/ModalList/ModalList";
 import weatherModalStore from "../../../../store/weatherModalStore";
+import { useNavigate } from "react-router-dom";
 const Home_Header = () => {
   const { toggleDrawer } = ModalStore();
   const { setValueSearch } = weatherModalStore();
+  const navagite = useNavigate();
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValueSearch(event.target.value);
   };
@@ -16,7 +18,13 @@ const Home_Header = () => {
         <span>Một dịch vụ từ Viện Khí tượng và NRK</span>
       </div>
       <div className="Home-Header">
-        <div className="logo">
+        <div
+          className="logo"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            navagite("/");
+          }}
+        >
           <img
             alt=""
             className="logo-img"

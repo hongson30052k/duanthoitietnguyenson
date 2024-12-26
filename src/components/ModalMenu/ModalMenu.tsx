@@ -7,9 +7,33 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ModalStore from "../../store/openModalMenuStore";
 import CloseIcon from "@mui/icons-material/Close";
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function ModalMenu() {
   const { open, toggleDrawer } = ModalStore();
+  const navigate = useNavigate();
+  const handleClick = (text: string) => {
+    switch (text) {
+      case "Bản đồ":
+        toggleDrawer(false);
+        break;
+      case "Cảnh báo nguy hiệm":
+        toggleDrawer(false);
+        break;
+      case "Nhiệt độ am":
+        toggleDrawer(false);
+        break;
+      case "Độ sâu tuyết":
+        toggleDrawer(false);
+        break;
+      case "Đèo núi":
+        toggleDrawer(false);
+        break;
+      case "Liên hệ":
+        navigate("/contact");
+        break;
+    }
+  };
   const DrawerList = (
     <>
       <CloseIcon
@@ -47,7 +71,7 @@ export default function ModalMenu() {
             <>
               <Divider />
               <ListItem key={text} disablePadding>
-                <ListItemButton>
+                <ListItemButton onClick={() => handleClick(text)}>
                   <Typography
                     variant="h6"
                     sx={{

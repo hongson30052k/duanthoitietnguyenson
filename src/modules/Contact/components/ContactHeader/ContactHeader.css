@@ -1,0 +1,41 @@
+.Contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.Contact-header .Contact-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Contact-header .Contact-header-left img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.Contact-header .Contact-header-left span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #3579d3;
+  cursor: pointer;
+}
+.Contact-header .Contact-header-left:hover {
+  text-decoration: underline;
+}
+.Contact-header .Contact-header-right {
+  font-size: 17px;
+  font-weight: 400;
+  color: #3579d3;
+}
+.Contact-header .Contact-header-right:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media screen and (max-width: 674px) {
+  .Contact-header-right {
+    display: none;
+  }
+}

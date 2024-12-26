@@ -20,110 +20,25 @@ export default function ShowWeatherTable() {
     await fetchDay(day);
     toggleDrawer(true);
   };
-  const rows = [
-    {
-      day: weatherId?.week_weather?.[(weekday + 6) % 7]?.day,
-      temperature: weatherId?.week_weather?.[(weekday + 6) % 7]?.temperature,
-      wind: weatherId?.week_weather?.[(weekday + 6) % 7]?.wind,
-      precip: weatherId?.week_weather?.[(weekday + 6) % 7]?.precip,
+  const getWeather = (offset: number) =>
+    weatherId?.week_weather?.[(weekday + offset) % 7];
+
+  const rows = Array.from({ length: 7 }, (_, index) => {
+    const weather = getWeather(6 - index);
+    return {
+      day: weather?.day,
+      temperature: weather?.temperature,
+      wind: weather?.wind,
+      precip: weather?.precip,
       weather_day: {
-        night: weatherId?.week_weather?.[(weekday + 6) % 7]?.weather_day?.night,
-        morning:
-          weatherId?.week_weather?.[(weekday + 6) % 7]?.weather_day?.morning,
-        afternoon:
-          weatherId?.week_weather?.[(weekday + 6) % 7]?.weather_day?.afternoon,
-        evening:
-          weatherId?.week_weather?.[(weekday + 6) % 7]?.weather_day?.evening,
+        night: weather?.weather_day?.night,
+        morning: weather?.weather_day?.morning,
+        afternoon: weather?.weather_day?.afternoon,
+        evening: weather?.weather_day?.evening,
       },
-    },
-    {
-      day: weatherId?.week_weather?.[(weekday + 5) % 7]?.day,
-      temperature: weatherId?.week_weather?.[(weekday + 5) % 7]?.temperature,
-      wind: weatherId?.week_weather?.[(weekday + 5) % 7].wind,
-      precip: weatherId?.week_weather?.[(weekday + 5) % 7].precip,
-      weather_day: {
-        night: weatherId?.week_weather?.[(weekday + 5) % 7]?.weather_day?.night,
-        morning:
-          weatherId?.week_weather?.[(weekday + 5) % 7]?.weather_day?.morning,
-        afternoon:
-          weatherId?.week_weather?.[(weekday + 5) % 7]?.weather_day?.afternoon,
-        evening:
-          weatherId?.week_weather?.[(weekday + 5) % 7]?.weather_day?.evening,
-      },
-    },
-    {
-      day: weatherId?.week_weather?.[(weekday + 4) % 7]?.day,
-      temperature: weatherId?.week_weather?.[(weekday + 4) % 7].temperature,
-      wind: weatherId?.week_weather?.[(weekday + 4) % 7].wind,
-      precip: weatherId?.week_weather?.[(weekday + 4) % 7].precip,
-      weather_day: {
-        night: weatherId?.week_weather?.[(weekday + 4) % 7]?.weather_day?.night,
-        morning:
-          weatherId?.week_weather?.[(weekday + 4) % 7]?.weather_day?.morning,
-        afternoon:
-          weatherId?.week_weather?.[(weekday + 4) % 7]?.weather_day?.afternoon,
-        evening:
-          weatherId?.week_weather?.[(weekday + 4) % 7]?.weather_day?.evening,
-      },
-    },
-    {
-      day: weatherId?.week_weather?.[(weekday + 3) % 7]?.day,
-      temperature: weatherId?.week_weather?.[(weekday + 3) % 7]?.temperature,
-      wind: weatherId?.week_weather?.[(weekday + 3) % 7]?.wind,
-      precip: weatherId?.week_weather?.[(weekday + 3) % 7]?.precip,
-      weather_day: {
-        night: weatherId?.week_weather?.[(weekday + 3) % 7]?.weather_day?.night,
-        morning:
-          weatherId?.week_weather?.[(weekday + 3) % 7]?.weather_day?.morning,
-        afternoon:
-          weatherId?.week_weather?.[(weekday + 3) % 7]?.weather_day?.afternoon,
-        evening:
-          weatherId?.week_weather?.[(weekday + 3) % 7]?.weather_day?.evening,
-      },
-    },
-    {
-      day: weatherId?.week_weather?.[(weekday + 2) % 7]?.day,
-      temperature: weatherId?.week_weather?.[(weekday + 2) % 7]?.temperature,
-      wind: weatherId?.week_weather?.[(weekday + 2) % 7]?.wind,
-      precip: weatherId?.week_weather?.[(weekday + 2) % 7]?.precip,
-      weather_day: {
-        night: weatherId?.week_weather?.[(weekday + 2) % 7]?.weather_day?.night,
-        morning:
-          weatherId?.week_weather?.[(weekday + 2) % 7]?.weather_day?.morning,
-        afternoon:
-          weatherId?.week_weather?.[(weekday + 2) % 7]?.weather_day?.afternoon,
-        evening:
-          weatherId?.week_weather?.[(weekday + 2) % 7]?.weather_day?.evening,
-      },
-    },
-    {
-      day: weatherId?.week_weather?.[(weekday + 1) % 7]?.day,
-      temperature: weatherId?.week_weather?.[(weekday + 1) % 7]?.temperature,
-      wind: weatherId?.week_weather?.[(weekday + 1) % 7]?.wind,
-      precip: weatherId?.week_weather?.[(weekday + 1) % 7]?.precip,
-      weather_day: {
-        night: weatherId?.week_weather?.[(weekday + 1) % 7]?.weather_day?.night,
-        morning:
-          weatherId?.week_weather?.[(weekday + 1) % 7]?.weather_day?.morning,
-        afternoon:
-          weatherId?.week_weather?.[(weekday + 1) % 7]?.weather_day?.afternoon,
-        evening:
-          weatherId?.week_weather?.[(weekday + 1) % 7]?.weather_day?.evening,
-      },
-    },
-    {
-      day: weatherId?.week_weather?.[weekday]?.day,
-      temperature: weatherId?.week_weather?.[weekday]?.temperature,
-      wind: weatherId?.week_weather?.[weekday]?.wind,
-      precip: weatherId?.week_weather?.[weekday]?.precip,
-      weather_day: {
-        night: weatherId?.week_weather?.[weekday]?.weather_day?.night,
-        morning: weatherId?.week_weather?.[weekday]?.weather_day?.morning,
-        afternoon: weatherId?.week_weather?.[weekday]?.weather_day?.afternoon,
-        evening: weatherId?.week_weather?.[weekday]?.weather_day?.evening,
-      },
-    },
-  ];
+    };
+  });
+
   return (
     <div className="Home-content">
       <TableContainer>

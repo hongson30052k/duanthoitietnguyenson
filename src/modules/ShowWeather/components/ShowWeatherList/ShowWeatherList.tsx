@@ -4,6 +4,8 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import WeatherForecast from "../WeatherForecast/WeatherForecast";
 import ShowWeatherTable from "../ShowWeatherTable/ShowWeatherTable";
+import NeighboringAreas from "../NeighboringAreas/NeighboringAreas";
+import TableDetail from "../TableDetail/TableDetail";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -119,10 +121,10 @@ export default function ShowWeatherList() {
           <ShowWeatherTable />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Item Two
+          <NeighboringAreas />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          Item Three
+          <TableDetail />
         </CustomTabPanel>
       </Box>
     </>

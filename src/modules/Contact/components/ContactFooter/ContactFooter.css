@@ -1,0 +1,27 @@
+.Contact-footer {
+  margin-top: 60px;
+}
+
+.Contact-footer-border {
+  width: 100%;
+  height: 1px;
+  background-color: #d0cdcd;
+}
+
+.Contact-footer-content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Contact-footer-content span {
+  color: #5e6f73;
+  cursor: pointer;
+}
+.Contact-footer-content select {
+  font-size: 16px;
+  font-weight: 400;
+  color: #5e6f73;
+  cursor: pointer;
+  border: none;
+}

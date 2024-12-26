@@ -1,0 +1,59 @@
+.Contact-main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.Contact-main span {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #3579d3;
+  padding: 30px 40px;
+  background-color: #eef6f8;
+  border-radius: 10px;
+  border: 1.2px solid #8ca6c9;
+}
+
+.Contact-main span:hover {
+  border: 1.2px solid #2f86f8;
+  cursor: pointer;
+}
+.Contact-list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 100%;
+  gap: 20px;
+}
+.Contact-list span {
+  font-size: 18px;
+  font-weight: 100;
+}
+.Contact-list div:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Contact-list .Contact-list-border {
+  margin-top: 15px;
+  border-bottom: 1px solid #d0cdcd;
+}
+@media screen and (max-width: 1150px) {
+  .Contact-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Contact-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Contact-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Contact-list {
+    grid-template-columns: 1fr;
+  }
+}
