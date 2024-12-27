@@ -1,0 +1,15 @@
+.WeatherWarnings-content {
+  margin: 0 auto;
+  width: 1400px;
+  max-width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.css-13xfq8m-MuiTabPanel-root {
+  padding: 0 !important;
+}
+
+.css-1qltlow-MuiTabs-indicator {
+  display: none !important;
+}

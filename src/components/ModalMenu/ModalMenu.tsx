@@ -17,17 +17,17 @@ export default function ModalMenu() {
       case "Bản đồ":
         toggleDrawer(false);
         break;
-      case "Cảnh báo nguy hiệm":
-        toggleDrawer(false);
+      case "Cảnh báo nguy hiểm":
+        navigate("/weather-warnings");
         break;
-      case "Nhiệt độ am":
-        toggleDrawer(false);
+      case "Nhiệt độ ẩm":
+        navigate("/water-temperatures");
         break;
       case "Độ sâu tuyết":
         toggleDrawer(false);
         break;
       case "Đèo núi":
-        toggleDrawer(false);
+        navigate("/mountain-passes");
         break;
       case "Liên hệ":
         navigate("/contact");

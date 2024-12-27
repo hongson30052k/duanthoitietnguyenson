@@ -127,19 +127,28 @@ const Home_Main = () => {
             })}
         </div>
         <div className="Layout-list-button">
-          <div className="Layout-list-button-1">
+          <div className="Layout-list-button-1" onClick={() => navagite("/")}>
             <AddLocationAltIcon />
             <span>Bản đồ</span>
           </div>
-          <div className="Layout-list-button-2">
+          <div
+            className="Layout-list-button-2"
+            onClick={() => navagite("/weather-warnings")}
+          >
             <DangerousIcon />
             <span>Cảnh báo nguy hiểm</span>
           </div>
-          <div className="Layout-list-button-3">
+          <div
+            className="Layout-list-button-3"
+            onClick={() => navagite("/water-temperatures")}
+          >
             <AcUnitIcon />
-            <span>độ sâu tuyết</span>
+            <span>Nhiệt độ ẩm</span>
           </div>
-          <div className="Layout-list-button-4">
+          <div
+            className="Layout-list-button-4"
+            onClick={() => navagite("/mountain-passes")}
+          >
             <SatelliteIcon />
             <span>Đèo núi</span>
           </div>

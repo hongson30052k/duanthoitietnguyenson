@@ -1,0 +1,54 @@
+.MountainPasses-main .MountainPasses-main-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.MountainPasses-list {
+  margin-top: 50px;
+  font-size: 20px;
+}
+.MountainPasses-list h4 {
+  margin-top: 20px;
+}
+.MountainPasses-list-north {
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid #d0cdcd;
+}
+.MountainPasses-list-north:hover {
+  background-color: #d0cdcd;
+  cursor: pointer;
+}
+.MountainPasses-list-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.MountainPasses-list-north span:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  padding: 5px 10px;
+  background-color: rgb(38, 110, 38);
+  border-radius: 5px;
+}
+
+.MountainPasses-list-north span:nth-child(2) {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.MountainPasses-list-north span:last-child {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 2px 5px;
+  background-color: rgb(87, 255, 199);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: 0;
+}

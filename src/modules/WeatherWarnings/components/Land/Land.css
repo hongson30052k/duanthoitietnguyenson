@@ -1,0 +1,101 @@
+.Land-main {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.Land-main .Land-button {
+  display: flex;
+  top: 0;
+  align-items: center;
+  gap: 20px;
+  color: #1767ce;
+}
+
+.Land-main .Land-button select {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 1px solid #b2cff5;
+  border-radius: 10px;
+}
+.Land-list {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.Land-list-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Land-list-left .Land-list-left-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.Land-list-left .Land-list-left-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #fff5e0;
+  border-radius: 10px;
+}
+.Land-list-left .Land-list-left-item img {
+  width: 40px;
+  height: 40px;
+  margin: 0 15px;
+}
+.Land-list-left .Land-list-left-item .Land-list-left-item-title {
+  display: flex;
+  flex-direction: column;
+}
+.Land-list-left
+  .Land-list-left-item
+  .Land-list-left-item-title
+  span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+.Land-list-left
+  .Land-list-left-item
+  .Land-list-left-item-title
+  span:last-child {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.Land-list-left .Land-list-left-item:hover {
+  cursor: pointer;
+  background-color: #f7e3b9;
+}
+
+.Land-list-right {
+  width: 50%;
+  height: 40%;
+  gap: 15px;
+}
+.Land-list-right {
+  width: 100%px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.Land-list-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Khi hover vào container, zoom ảnh */
+.Land-list-right:hover img {
+  transform: scale(1.5) translateY(-20%); /* Phóng to ảnh */
+}
+@media screen and (max-width: 600px) {
+  .Land-main .Land-button {
+    flex-direction: column;
+  }
+}

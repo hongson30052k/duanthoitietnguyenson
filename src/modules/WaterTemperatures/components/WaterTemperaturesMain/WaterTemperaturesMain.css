@@ -1,0 +1,67 @@
+.WaterTemperatures-main .WaterTemperatures-main-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.WaterTemperatures-main .WaterTemperatures-main-title h6 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 550;
+}
+.WaterTemperatures-main .WaterTemperatures-main-title div span {
+  font-size: 16px;
+  color: #1767ce;
+  font-weight: 550;
+}
+
+.WaterTemperatures-main .WaterTemperatures-main-title div {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #87abda;
+  text-align: center;
+}
+
+.WaterTemperatures-main .WaterTemperatures-main-title div:hover {
+  background-color: #f6faff;
+  cursor: pointer;
+}
+
+.WaterTemperatures-main h2 {
+  margin-top: 20px;
+  color: #333;
+  font-weight: 550;
+}
+.WaterTemperatures-region-list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.WaterTemperatures-region-list span {
+  padding: 12px 16px;
+  border: 1px solid #8b9199;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.WaterTemperatures-region-list span:hover {
+  cursor: pointer;
+  background-color: #eef5ff;
+  border: 1px solid #1767ce;
+}
+
+@media screen and (max-width: 1150px) {
+  .WaterTemperatures-region-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .WaterTemperatures-region-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

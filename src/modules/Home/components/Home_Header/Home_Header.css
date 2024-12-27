@@ -86,8 +86,6 @@
 }
 
 @media screen and (max-width: 674px) {
-  .page-header {
-  }
   .served-by {
     display: none;
   }
@@ -109,9 +107,6 @@
 }
 
 @media screen and (min-width: 1325px) {
-  .Home-content {
-    margin: 0 calc(4% + 4vw);
-  }
   .Home-Header .menu-icon {
     display: none;
   }

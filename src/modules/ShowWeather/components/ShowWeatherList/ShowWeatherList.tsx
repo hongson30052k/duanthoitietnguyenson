@@ -24,50 +24,7 @@ function CustomTabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box
-          sx={{
-            background:
-              "linear-gradient(180deg, rgba(219,234,255,1) 0%, rgba(253,253,254,1) 83%)",
-            ml: -18,
-            mr: -18,
-            pl: 18,
-            pr: 18,
-            "@media screen and (max-width: 1669px)": {
-              ml: -16,
-              mr: -16,
-              pl: 16,
-              pr: 16,
-            },
-            "@media screen and (max-width: 1440px)": {
-              ml: -13,
-              mr: -13,
-              pl: 14,
-              pr: 14,
-            },
-            "@media screen and (max-width: 1322px)": {
-              ml: -1,
-              mr: -1,
-              pl: 0,
-              pr: 0,
-            },
-            "@media screen and (max-width: 1024px)": {
-              ml: 0,
-              mr: 0,
-              pl: 0,
-              pr: 0,
-            },
-            "@media screen and (max-width: 768px)": {
-              ml: 0,
-              mr: 0,
-              pl: 0,
-              pr: 0,
-            },
-          }}
-        >
-          {children}
-        </Box>
-      )}
+      {value === index && <Box sx={{}}>{children}</Box>}
     </div>
   );
 }

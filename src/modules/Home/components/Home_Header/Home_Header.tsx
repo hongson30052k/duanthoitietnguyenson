@@ -28,7 +28,7 @@ const Home_Header = () => {
           <img
             alt=""
             className="logo-img"
-            src="https://birkeland.uib.no/wp-content/uploads/2021/01/nrk-logo.jpg"
+            src="https://hjelp.yr.no/hc/theming_assets/01HZPEEBS3GXR3M5X4E07Z5PYG"
           />
         </div>
         <div className="page-header">
